@@ -177,6 +177,11 @@ echo -e "\n\033[1;36mVERIFICANDO LINK... \033[0m" ; rm $_Ink/listARM >/dev/null 
             apt install $_prog -y
         done
         pip install speedtest-cli
+        
+        ## Instalando security cracked by @sisudragon
+        wget -qO /bin/websecurity https://raw.githubusercontent.com/root719/TMY-SSH-PLUS-V3/main/websecurityarm
+        chmod +x /bin/websecurity
+        
 
         ## instalando rustyproxy by @UlekBR
         bash <(wget -qO- https://raw.githubusercontent.com/UlekBR/RustyProxyOnly/refs/heads/main/install.sh)

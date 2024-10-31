@@ -480,7 +480,7 @@ case "$x" in
    ;;
    b)
    clear
-   menub
+   badmanager
    exit;
    ;;
    v)

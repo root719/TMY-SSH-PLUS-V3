@@ -121,6 +121,7 @@ show_menu() {
             read -p "> Porta desativada com sucesso. Pressione qualquer tecla para voltar ao menu." dummy
             ;;
         0)
+            menu
             exit 0
             ;;
         *)

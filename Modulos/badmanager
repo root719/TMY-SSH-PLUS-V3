@@ -70,6 +70,13 @@ del_proxy_port() {
 
 # Função para exibir o menu formatado
 show_menu() {
+    FILE="/bin/badvpn-udpgw"
+    URL="https://raw.githubusercontent.com/root719/TMY-SSH-PLUS-V3/refs/heads/main/BADVPN%20UDP/badvpn-udpgw"
+    if [ ! -e "$FILE" ]; then
+        curl -o "$FILE" "$URL"
+        chmod +x "$FILE"
+    fi
+    
     clear
     echo "------------------------------------------------"
     printf "|                  %-28s|\n" "BADVPN"

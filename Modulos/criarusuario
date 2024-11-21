@@ -250,7 +250,6 @@ fun_edithost() {
         fun_edithost
     fi
 }
-[[ ! -e /usr/lib/sshplus ]] && exit 0
 tput setaf 7;tput setab 4;tput bold;printf '%30s%s%-15s\n' "CRIAR USUÁRIO SSH";tput sgr0
 #echo -ne "\033[1;32m📝 NOME:\033[1;37m ";read namee
 #[[ -z $namee ]] && {

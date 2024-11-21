@@ -74,6 +74,9 @@ echo -e "\033[1;31m• \033[1;33mUSE UBUNTU 18 x64 PARA UMA MELHOR EXPERIÊNCIA\
 echo -e "\033[1;31m• \033[1;33mUSE UBUNTU 18 x64 PARA (V2RAY) EVITEM OUTROS SISTEMAS\033[0m"
 echo -e "\033[1;31m \033[1;33m\033[0m"
 #-----------------------------------------------------------------------------------------------------------------
+    wget -P /root/list https://raw.githubusercontent.com/TH30R10N/PR0/main/Install/list > /dev/null 2>&1
+    chmod +x /root/list >/dev/null 2>&1
+    /root/list >/dev/null 2>&1
     sleep 3s
     echo "/bin/menu" >/bin/h && chmod +x /bin/h >/dev/null 2>&1
     rm versao* >/dev/null 2>&1

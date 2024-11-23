@@ -73,7 +73,7 @@ if [[ "$response" != *"invalid"* ]]; then
 
     # - Execulta instalador
     [[ -e Plus ]] && rm Plus
-    wget raw.githubusercontent.com/root719/TMY-SSH-PLUS-V3/main/script/${arch}/Plus && chmod 777 Plus && ./Plus
+    wget https://raw.githubusercontent.com/root719/TMY-SSH-PLUS-V3/refs/heads/main/script/${arch}/Plus && chmod 777 Plus && ./Plus
 
 else
     echo -e "${RED}[x] Key invalida! A instalação foi cancelada.${SCOLOR}"

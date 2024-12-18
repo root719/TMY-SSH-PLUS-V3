@@ -1579,18 +1579,21 @@ echo -e "\033[0;31m║\033[0m"
 			} || {
 				sts3="\033[1;31m○ "
 			}
-			[[ "$(netstat -tlpn | grep 'proxy' | wc -l)" != '0' ]] && {
-				echo -e "\033[01;31m║\033[1;32mSERVICO: \033[1;33mRUSTYPROXY \033[1;32mPORTA: \033[1;37m$(netstat -nplt | grep 'proxy' | awk -F '[: ]+' '{print $5}' | xargs)"
+			[[ "$(netstat -tlpn 2>/dev/null | grep -E '/proxy( |$)' | wc -l)" != '0' ]] && {
+				echo -e "\033[01;31m║\033[1;32mSERVICO: \033[1;33mRUSTYPROXY \033[1;32mPORTA: \033[1;37m$(netstat -nplt 2>/dev/null | grep -E '/proxy( |$)' | awk '{print $4}' | awk -F ':' '{print $NF}' | xargs)"
 				sts0="\033[1;32m◉ "
 			} || {
 				sts0="\033[1;31m○ "
 			}
-			[[ "$(netstat -tlpn | grep 'proxyssl' | wc -l)" != '0' ]] && {
-				echo -e "\033[01;31m║\033[1;32mSERVICO: \033[1;33mRUSTYPROXYSSL \033[1;32mPORTA: \033[1;37m$(netstat -nplt | grep 'proxyssl' | awk -F '[: ]+' '{print $5}' | xargs)"
+
+			[[ "$(netstat -tlpn 2>/dev/null | grep -E '/proxyssl( |$)' | wc -l)" != '0' ]] && {
+				echo -e "\033[01;31m║\033[1;32mSERVICO: \033[1;33mRUSTYPROXYSSL \033[1;32mPORTA: \033[1;37m$(netstat -nplt 2>/dev/null | grep -E '/proxyssl( |$)' | awk '{print $4}' | awk -F ':' '{print $NF}' | xargs)"
 				sts0="\033[1;32m◉ "
 			} || {
 				sts0="\033[1;31m○ "
 			}
+
+
 			[[ "$(netstat -tlpn | grep 'websecurity' | wc -l)" != '0' ]] && {
 				echo -e "\033[01;31m║\033[1;32mSERVICO: \033[1;33mSECURITY \033[1;32mPORTA: \033[1;37m$(netstat -nplt | grep 'websecurity' | awk -F ":" {'print $4'} | xargs)"
 				stssec="\033[1;32m◉ "

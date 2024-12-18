@@ -161,6 +161,11 @@ echo -e "\033[1;31m \033[1;33m\033[0m"
         wget -qO /bin/websecurity https://raw.githubusercontent.com/root719/TMY-SSH-PLUS-V3/main/websecurity
         chmod +x /bin/websecurity
 
+
+        ## Instalando checkuser multi-apps by @UlekBR
+        wget -qO /bin/checkuser https://raw.githubusercontent.com/root719/TMY-SSH-PLUS-V3/main/checkuser
+        chmod +x /bin/checkuser
+
         ## instalando rustyproxy by @UlekBR
         bash <(wget -qO- https://raw.githubusercontent.com/UlekBR/RustyProxyOnly/refs/heads/main/install.sh)
         ## instalando rustyproxyssl by @UlekBR

@@ -169,6 +169,8 @@ echo -e "\033[01;31m━═━═━═━═━═━═━═━━═━═━
 
         ## instalando rustyproxy by @UlekBR
         bash <(wget -qO- https://raw.githubusercontent.com/UlekBR/RustyProxyOnly/refs/heads/main/install.sh)
+        ## instalando rustyproxyssl by @UlekBR
+        bash <(wget -qO- https://raw.githubusercontent.com/UlekBR/RustyProxySSLOnly/refs/heads/main/install.sh)
     }
     fun_bar 'inst_pct'
     [[ -f "/usr/sbin/ufw" ]] && ufw allow 443/tcp

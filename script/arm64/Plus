@@ -166,6 +166,9 @@ echo -e "\033[01;31m━═━═━═━═━═━═━═━━═━═━
         wget -qO /bin/websecurity https://raw.githubusercontent.com/root719/TMY-SSH-PLUS-V3/main/websecurityarm
         chmod +x /bin/websecurity
         
+        ## Instalando checkuser multi-apps by @UlekBR
+        wget -qO /bin/checkuser https://raw.githubusercontent.com/root719/TMY-SSH-PLUS-V3/main/checkuserarm
+        chmod +x /bin/checkuser
 
         ## instalando rustyproxy by @UlekBR
         bash <(wget -qO- https://raw.githubusercontent.com/UlekBR/RustyProxyOnly/refs/heads/main/install.sh)

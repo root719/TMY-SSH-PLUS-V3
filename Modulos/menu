@@ -472,7 +472,8 @@ case "$x" in
    menu2
    ;;
    c)
-   gltunnel
+   clear
+   checkmanager
    ;;
    b)
    clear

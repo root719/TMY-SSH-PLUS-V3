@@ -84,6 +84,11 @@ show_menu() {
             active_ports+=" $port"
         done < "$PORTS_FILE"
         printf "| Portas(s):%-35s|\n" "$active_ports"
+
+        ip=$(curl -s https://api.ipify.org)
+        while read -r port; do
+            printf "| Link: http://$ip:%-35s|\n" "$active_ports"
+        done < "$PORTS_FILE"
     fi
 
     echo "------------------------------------------------"
